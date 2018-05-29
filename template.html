@@ -1,0 +1,51 @@
+<html lang="en">                                   <!-- starts HTML and specifies the language!-->
+   <head>                                          <!--container for metadata (data about data) and is placed between the <html> tag and the <body> tag!-->
+      <link rel='stylesheet' href='styles.css'>    <!--loads the styles.css file from the same folder !-->
+      <title>CRUD template</title>                 <!--required in HTML documents and used to define the title of the document!-->
+   </head>                                         <!--container for all the head elements!-->
+   <body style="background-color:#ffff00;">
+      <center>
+         <img src="https://www.shakopee.k12.mn.us/cms/lib/MN01909221/Centricity/Domain/271/Banner%20(1).jpg" border="0px" 
+               width="400px" height="100px" >
+      </center>
+      <br>
+      <br>
+      <center>
+         <form action='create.php' method = 'post'><!--needed to send info to php file !-->
+            <input type='text' placeholder='Full Name' name='lastName' class="advancedSearchTextBox">
+            <select id='select' name='className'>
+                 <option value="Computer Integrated Manufacturing" >Computer Integrated Manufacturing</option>
+                 <option value="Computer Science Principles" >Computer Science Principles</option>
+                 <option value="Mobile OS Development" >Mobile OS Development</option>
+                 <option value="Small Gas Engines" >Small Gas Engines</option>
+                 <option value="Web Development" >Web Development</option>
+                 <option value="Woods 1" >Woods 1</option>
+            </select>
+           <select id='select' name='year'>
+                 <option value="9" >9</option>
+                 <option value="10" >10</option>
+                 <option value="11" >11</option>
+                 <option value="12" >12</option>
+            </select>
+            
+            <input name = 'create' type = 'submit' value = 'Submit Info'>
+			 <!-- 
+           <input name = 'update' type = 'submit' value = 'Update Info'>  
+           <input name = 'del'    type = 'submit' value = 'Delete Info'>!-->
+         </form>
+         Find the roster for the selected class
+         <form action= 'read.php' method = 'post'>
+            <select id='select' name='className'>
+               <option value="Computer Integrated Manufacturing" >Computer Integrated Manufacturing</option>
+               <option value="Computer Science Principles" >Computer Science Principles</option>
+               <option value="Mobile OS Development" >Mobile OS Development</option>
+               <option value="Small Gas Engines" >Small Gas Engines</option>
+               <option value="Web Development" >Web Development</option>
+               <option value="Woods 1" >Woods 1</option>
+            </select>
+               <p></p>
+            <input name = 'read'   type = 'submit' value = 'Find Info'>
+         </form>
+      </center>
+   </body>
+</html>
